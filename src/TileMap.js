@@ -258,7 +258,7 @@ export default class TileMap {
         if (!pause) {
           setInterval(() => {
             this.map[row][column] = 0
-          }, 1 + Math.floor(Math.random() * 10000))
+          }, 20000 + Math.floor(Math.random() * 10000))
         }
 
         this.value = this.value + 1
