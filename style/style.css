@@ -1,0 +1,69 @@
+#gameCanvas {
+  box-shadow: 10px 10px 20px black;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  font-family: comic sans MS;
+  color: lightgray;
+}
+body {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgb(17, 51, 161) 0%,
+    rgb(134, 34, 195) 100%
+  );
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn {
+  border: 1px solid rgb(255, 255, 255);
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+.btn1,
+.btn2 {
+  color: rgb(255, 255, 255);
+}
+
+.btn1:hover,
+.btn2:hover {
+  color: #fff;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: rgb(255, 255, 255);
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn2::before,
+.btn4::before {
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.btn1:hover::before,
+.btn2:hover::before {
+  height: 180%;
+}

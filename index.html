@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pac-Man</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Pac-Man</h1>
+      <div class="controls"><div class="btn btn2">SCORE: <span id="SCORE">0</span></div></div>
+      <canvas id="gameCanvas"></canvas>
+      <div class="controls">
+        <div>
+          <button class="btn btn2" id="UP">UP</button>
+        </div>
+        <div>
+          <button class="btn btn2" id="LEFT">Left</button>
+          <button class="btn btn2" id="RIGHT">Right</button>
+        </div>
+        <div>
+          <button class="btn btn2" id="DOWN">DOWN</button>
+      </div>
+    </div>
+
+    <script src="src/Game.js" type="module"></script>
+  </body>
+</html>
