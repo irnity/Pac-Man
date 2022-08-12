@@ -16,7 +16,7 @@ const gameOverSound = new Audio("../sounds/gameOver.wav")
 const gameWinSound = new Audio("../sounds/gameWin.wav")
 
 function gameLoop() {
-  tileMap.draw(ctx)
+  tileMap.draw(ctx, pause())
   drawGameEnd()
   pacman.draw(ctx, pause(), enemies)
   enemies.forEach((enemy) => enemy.draw(ctx, pause(), pacman))

@@ -249,15 +249,17 @@ export default class TileMap {
     return this.map.flat().filter((tile) => tile === 0).length
   }
 
-  eatDot(x, y) {
+  eatDot(x, y, pause) {
     const row = y / this.tileSize
     const column = x / this.tileSize
     if (Number.isInteger(row) && Number.isInteger(column)) {
       if (this.map[row][column] === 0) {
         this.map[row][column] = 5
-        setInterval(() => {
-          this.map[row][column] = 0
-        }, 10000 + Math.floor(Math.random() * 10000))
+        if (!pause) {
+          setInterval(() => {
+            this.map[row][column] = 0
+          }, 1 + Math.floor(Math.random() * 10000))
+        }
 
         this.value = this.value + 1
         document.getElementById("SCORE").innerHTML = this.value

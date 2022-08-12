@@ -53,7 +53,7 @@ export default class Pacman {
       this.#move()
       this.#animate()
     }
-    this.#eatDot()
+    this.#eatDot(pause)
     this.#eatPowerDot()
     this.#eatGhost(enemies)
     const size = this.tileSize / 2
@@ -226,8 +226,8 @@ export default class Pacman {
     }
   }
 
-  #eatDot() {
-    if (this.tileMap.eatDot(this.x, this.y) && this.madeFirstMove) {
+  #eatDot(pause) {
+    if (this.tileMap.eatDot(this.x, this.y, pause) && this.madeFirstMove) {
       this.wakaSound.play()
     }
   }
